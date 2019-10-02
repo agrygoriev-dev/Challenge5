@@ -6,6 +6,10 @@
 <% @products.each do |product|%>
 <h2><%= product.title%></h2>
 <p>
+<strong>Category: </strong>
+<%= product.category[:name]%>
+</p>
+<p>
 <strong>Price: $</strong>
 <%= product.price%>
 </p>
