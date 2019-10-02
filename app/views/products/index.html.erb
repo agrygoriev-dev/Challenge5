@@ -1,7 +1,7 @@
 <h1>Products</h1>
-<h2>Total number of products: <%=@products.count%></h2>
-<h2>Average price of products: $<%=@average_price%></h2>
-<h2>Quantity of stocked products: <%=@total_quantity%></h2>
+<h3>Total number of products: <%=@products.count%></h3>
+<h3>Average price of products: $<%=@average_price%></h3>
+<h3>Quantity of stocked products: <%=@total_quantity%></h3>
 <% @products.each do |product|%>
 <h2><%= product.title%></h2>
 <p>
