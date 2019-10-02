@@ -12,3 +12,17 @@
 #                 price: Faker::Number.decimal(l_digits: 2),
 #                 stock_quantity: Faker::Number.number(digits: 2))
 # end
+Product.destroy_all
+Category.destroy_all
+
+csv_file = Rails.root + 'db/products.csv'
+products = SmarterCSV.process(csv_file)
+
+products.each do |product|
+  category = Category.find_or_create_by(name: product[:category])
+  product_record = category.products.build(title: product[:name],
+                                           description: product[:description],
+                                           price: product[:price],
+                                           stock_quantity: product[:stock_quantity])
+  product_record.save
+end
