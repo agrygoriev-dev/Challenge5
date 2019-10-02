@@ -7,8 +7,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-676.times do
-  Product.create(title: Faker::Lorem.word,
-                 price: Faker::Number.decimal(l_digits: 2),
-                 stock_quantity: Faker::Number.number(digits: 2))
-end
+# 676.times do
+#  Product.create(title: Faker::Lorem.word,
+#                 price: Faker::Number.decimal(l_digits: 2),
+#                 stock_quantity: Faker::Number.number(digits: 2))
+# end
